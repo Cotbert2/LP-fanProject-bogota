@@ -2,20 +2,19 @@
 
   <section class="main-container">
     <section class="fan-project-section">
-
-
       <p class="section-title" (click)="changeStatusFP1()">Fan Project #1</p>
 
       <div class="df">
         <div class="sections-container">
-          <div class="color">
 
+
+          <div class="color" (click)="changeToFullColorPage('red')">
             <ion-card>
               <ion-card-header>
                 <ion-card-title>Plateas</ion-card-title>
               </ion-card-header>
               <ion-card-content>
-                <ion-label>Platea 1</ion-label><br>
+                <ion-label>Platea 1 | Platea 2</ion-label><br>
 
               </ion-card-content>
             </ion-card>
@@ -26,58 +25,53 @@
           </div>
 
 
-          <div class="color">
+          <div class="color" (click)="changeToFullColorPage('blue')">
 
             <ion-card>
               <ion-card-header>
-                <ion-card-title>Plateas</ion-card-title>
+                <ion-card-title>Graderías</ion-card-title>
               </ion-card-header>
               <ion-card-content>
-                <ion-label>Platea 1</ion-label>
+                <ion-label>Fila 1</ion-label>
               </ion-card-content>
             </ion-card>
             <!--Ion image-->
-            <figcaption class="icon">
+            <figcaption class="icon blue-logos">
               <img src="assets/img/blue.png" alt="">
             </figcaption>
           </div>
 
-          <div class="color">
+          <div class="color" (click)="changeToFullColorPage('yellow')">
 
             <ion-card>
               <ion-card-header>
-                <ion-card-title>Plateas</ion-card-title>
+                <ion-card-title>Graderías</ion-card-title>
               </ion-card-header>
               <ion-card-content>
-                <ion-label>Platea 1</ion-label><br>
+                <ion-label>Filas 13 y 14</ion-label><br>
               </ion-card-content>
             </ion-card>
             <!--Ion image-->
-            <figcaption class="icon">
-              <img src="assets/img/yellow.png" alt="">
+            <figcaption class="icon yellow-logo">
+              <img src="assets/img/yellow.png" alt="" >
             </figcaption>
           </div>
         </div>
-
-
-
-
-
       </div>
     </section>
 
 
-    <section class="fan-project-section" (click)="changeStatusFP3()">
+    <section class="fan-project-section">
       <section>
         <p class="section-title" (click)="changeStatusFP2()">Fan project #2</p>
         <figcaption class="fpimg">
-          <img src="assets/img/tem.png" alt="The emptiness machine">
+          <img src="assets/img/tem.png" (click)="changeToFullColorPage('pink')" alt="The emptiness machine">
         </figcaption>
       </section>
+    </section>
     
-      <section>
+    <section class="fan-project-section" (click)="changeStatusFP3()">
         <p class="section-title">Ideas Adicionales</p>
-      </section>
     </section>
   </section>
 
