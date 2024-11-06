@@ -1,3 +1,8 @@
-<section class="full-container yellow">
-
+<section class="full-container"
+[ngClass]="{
+  'red' : backGroundColor === 'red',
+  'blue' : backGroundColor === 'blue',
+  'yellow' : backGroundColor === 'yellow'
+}"
+>
 </section>
