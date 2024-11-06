@@ -69,7 +69,6 @@
 
     <section class="fan-project-section">
       <section>
-
         <p class="section-title">Fan project #2</p>
         <figcaption class="fpimg">
           <img src="assets/img/tem.png" alt="The emptiness machine">
@@ -115,6 +114,59 @@
     </ng-template>
   </ion-modal>
 
+
+  <ion-modal [isOpen]="fanProject2ModalVisible">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Fan Project #2</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="changeStatusFP2()" >Ok</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <figcaption class="modal-img-container">
+          <img src="assets/img/tem2.png" alt="Mapa" class="modal-image">
+        </figcaption>
+        <p>
+          Haz click en la sección para desplegar el recuadro rosa durante <strong> The Emptiness Machine</strong>
+        </p>
+
+        <figcaption class="info-fp1">
+          <img src="assets/img/smartphone-tem.png" alt="asdas">
+          <img src="assets/img/mike-art.png" alt="" class="mike-art">
+        </figcaption>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+
+
+  <ion-modal [isOpen]="fanProject3ModalVisible">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Fan Project #3</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="changeStatusFP3()" >Ok</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <figcaption class="modal-img-container">
+          <img src="assets/img/map.png" alt="Mapa" class="modal-image">
+        </figcaption>
+        <p>
+        Cubre el flash de tu celular con el sticker, enciende tu linterna/flash previo al <strong>inicio del concierto,
+          Lost/Breaking the Habit</strong> y al final de <strong> Bleed it Out.</strong>
+
+          <br>Ubica tu sección y tu fila para saber que color te corresponde:
+        </p>
+        <img src="assets/img/fp1-description.png" alt="Guia">
+      </ion-content>
+    </ng-template>
+  </ion-modal>
 
 
 

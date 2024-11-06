@@ -9,8 +9,8 @@ export class Tab1Page {
 
   constructor() {}
 
-  fanProject1ModalVisible : boolean = true;
-  fanProject2ModalVisible : boolean = false;
+  fanProject1ModalVisible : boolean = false;
+  fanProject2ModalVisible : boolean = true;
   fanProject3ModalVisible : boolean = false;
 
   changeStatusFP1 () : void {
@@ -18,7 +18,7 @@ export class Tab1Page {
   }
 
   changeStatusFP2 () : void {
-    this.fanProject1ModalVisible = !this.fanProject1ModalVisible;
+    this.fanProject2ModalVisible = !this.fanProject2ModalVisible;
   }
 
   changeStatusFP3 () : void {
