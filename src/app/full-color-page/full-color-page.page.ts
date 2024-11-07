@@ -7,7 +7,9 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./full-color-page.page.scss'],
 })
 export class FullColorPagePage implements OnInit {
+
   backGroundColor : string = "white";
+  isButtonBackVisible : boolean = true;
 
   constructor( private activedRouter : ActivatedRoute) { 
     this.activedRouter.queryParams.subscribe( params => {
@@ -18,6 +20,10 @@ export class FullColorPagePage implements OnInit {
 
   ngOnInit() {
     
+  }
+
+  backMainPage() : void{
+    window.history.back();
   }
 
   //TODO: triple click anywhere integration
