@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 export class FullColorPagePage implements OnInit {
 
   backGroundColor : string = "white";
-  isButtonBackVisible : boolean = true;
+  isButtonBackVisible : boolean = false;
 
   constructor( private activedRouter : ActivatedRoute) { 
     this.activedRouter.queryParams.subscribe( params => {
@@ -22,8 +22,33 @@ export class FullColorPagePage implements OnInit {
     
   }
 
+  tripleClickCount : number = 0;
+  tripleClickTimer : any;
+
+  tripleClick() : void{
+    this.tripleClickCount++;
+    if(this.tripleClickCount == 1){
+      this.tripleClickTimer = setTimeout(() => {
+        this.tripleClickCount = 0;
+      }, 300);
+
+    }else if(this.tripleClickCount == 2){
+      clearTimeout(this.tripleClickTimer);
+      this.tripleClickCount = 0;
+      this.changeVisibility();
+    }
+  }
+
   backMainPage() : void{
     window.history.back();
+  }
+
+  changeVisibility() : void{
+    console.log("changeVisibility");
+    this.isButtonBackVisible = true;
+    setTimeout(() => {
+      this.isButtonBackVisible = false;
+    } , 2000);
   }
 
   //TODO: triple click anywhere integration

@@ -1,4 +1,4 @@
-<section class="full-container"
+<section class="full-container" (click)="tripleClick()"
 [ngClass]="{
   'red' : backGroundColor === 'red',
   'blue' : backGroundColor === 'blue',
@@ -7,9 +7,15 @@
 }"
 >
 
-<figcaption class="icons-container">
-  <ion-icon name="arrow-back-circle-outline"  (click)="backMainPage()"></ion-icon>
-</figcaption>
+
+  <figcaption  class="icons-container" 
+  
+  [ngClass]="{
+    'visible' : isButtonBackVisible === true,
+    'hidden' : isButtonBackVisible === false
+  }">
+    <ion-icon name="arrow-back-circle-outline"  (click)="backMainPage()"></ion-icon>
+  </figcaption>
 
 
 </section>

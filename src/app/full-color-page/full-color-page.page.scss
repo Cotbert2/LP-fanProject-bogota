@@ -4,19 +4,19 @@
 }
 
 .pink{
-    background-color: pink;
+    background-color: #D061A2;
 }
 
 .red{
-    background-color: red;
+    background-color: #C92127;
 }
 
 .blue{
-    background-color: blue;
+    background-color: #3257A7;
 }
 
 .yellow{
-    background-color: yellow;
+    background-color: #FFCE08;
 }
 
 .icons-container ion-icon{
@@ -26,4 +26,12 @@
     top: 0;
     zoom: 3.0;
     color: white;
+}
+
+.hidden{
+    display: none;
+}
+
+.visible{
+    display: block;
 }
