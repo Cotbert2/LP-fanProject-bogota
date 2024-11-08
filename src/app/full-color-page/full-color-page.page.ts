@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { StatusBar } from '@capacitor/status-bar';
 
 @Component({
   selector: 'app-full-color-page',
@@ -19,7 +20,11 @@ export class FullColorPagePage implements OnInit {
 
 
   ngOnInit() {
-    
+    this.setFullScreen();
+  }
+
+  async setFullScreen()  {
+    await StatusBar.hide();
   }
 
   tripleClickCount : number = 0;
